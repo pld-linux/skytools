@@ -13,6 +13,7 @@ BuildRequires:	automake
 BuildRequires:	postgresql-backend-devel
 BuildRequires:	python-devel >= 1:2.3
 %pyrequires_eq	python-libs
+Requires:	python-psycopg
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -54,3 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/pgq/*.py[co]
 %dir %{py_sitescriptdir}/skytools
 %{py_sitescriptdir}/skytools/*.py[co]
+%{_datadir}/postgresql/contrib/*
