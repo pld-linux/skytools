@@ -1,7 +1,7 @@
 %define snap 20070301
 Summary:	Database support tools and replication for PostgreSQL
 Name:		skytools
-Version:	0.5.4
+Version:	0.0
 Release:	1
 License:	GPL
 Group:		Libraries/Python
@@ -12,7 +12,6 @@ BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	postgresql-backend-devel
 BuildRequires:	python-devel >= 1:2.3
-Requires:	libextractor >= %{version}
 %pyrequires_eq	python-libs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
