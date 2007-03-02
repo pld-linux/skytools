@@ -7,6 +7,7 @@ License:	GPL
 Group:		Libraries/Python
 Source0:	%{name}-%{snap}.tar.gz
 # Source0-md5:	3e0f9b1065203fc16ffc6c1d2e49b2d0
+Patch0:	%{name}-contribdir.patch
 URL:		https://developer.skype.com/SkypeGarage/DbProjects/SkyTools
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -22,6 +23,7 @@ PostgreSQL servers.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
 %configure
