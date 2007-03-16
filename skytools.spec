@@ -1,5 +1,6 @@
 %define snap 20070301
 Summary:	Database support tools and replication for PostgreSQL
+Summary(pl.UTF-8):	Narzędzia wspomagające i replikacja dla baz danych PostgreSQL
 Name:		skytools
 Version:	0.0
 Release:	1
@@ -7,7 +8,7 @@ License:	GPL
 Group:		Libraries/Python
 Source0:	%{name}-%{snap}.tar.gz
 # Source0-md5:	3e0f9b1065203fc16ffc6c1d2e49b2d0
-Patch0:	%{name}-contribdir.patch
+Patch0:		%{name}-contribdir.patch
 URL:		https://developer.skype.com/SkypeGarage/DbProjects/SkyTools
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -20,6 +21,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This is package of tools used at Skype to manage their cluster of
 PostgreSQL servers.
+
+%description -l pl.UTF-8
+Ten pakiet zawiera narzędzia używane przez firmę Skype do zarządzania
+klastrem serwerów PostgreSQL.
 
 %prep
 %setup -q -n %{name}
